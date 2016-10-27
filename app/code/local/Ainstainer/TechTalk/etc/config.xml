@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ainstainer_TechTalk>
+            <version>1.0.0</version>
+        </Ainstainer_TechTalk>
+    </modules>
+    <global>
+        <models>
+            <techtalk>
+                <class>Ainstainer_TechTalk_Model</class>
+            </techtalk>
+        </models>
+
+        <helpers>
+            <techtalk>
+                <class>Ainstainer_TechTalk_Helper</class>
+            </techtalk>
+        </helpers>
+
+    </global>
+</config>
