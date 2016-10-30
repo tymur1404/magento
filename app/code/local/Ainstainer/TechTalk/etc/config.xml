@@ -19,4 +19,24 @@
         </helpers>
 
     </global>
+
+<frontend>
+        <routers>
+            <techtalk>
+                <use>standard</use>
+                <args>
+                    <module>Ainstainer_TechTalk</module>
+                    <frontName>megatalk</frontName>
+                </args>
+            </techtalk>
+        </routers>
+
+        <layout>
+            <updates>
+                <techtalk>
+                    <file>techtalk.xml</file>
+                </techtalk>
+            </updates>
+        </layout>
+    </frontend>
 </config>
