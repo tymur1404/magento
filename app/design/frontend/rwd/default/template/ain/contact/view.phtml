@@ -1,0 +1,24 @@
+<?php
+/** @var Ainstainer_TechTalk_Block_View $this
+ * Created by PhpStorm.
+ * User: timur
+ * Date: 02.11.16
+ * Time: 11:43
+ */
+ini_set('display_errors', 1);
+$CollectionContact = Mage::getModel('techtalk/contact')->getCollection();
+
+?>
+<ul>
+    <li><?php echo $this->getRequestRecord()->getName()?> said:</li>
+    <li><?php echo $this->getRequestRecord()->getComment()?></li>
+</ul>
+
+<h1>OTHER COMMENTS</h1>
+<ul>
+    <?php foreach($CollectionContact as $contact){
+        if($this->getRequestRecord()->getRequest_id() != $contact->getRequest_id()){?>
+        <li><?php echo $contact->getName()?> said:</li>
+        <li><?php echo $contact->getComment()?></li>
+    <?php }}?>
+</ul>
