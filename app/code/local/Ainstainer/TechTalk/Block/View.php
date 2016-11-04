@@ -1,5 +1,5 @@
 <?php
-/**
+/** 
  * Created by PhpStorm.
  * User: timur
  * Date: 28.10.16
@@ -7,13 +7,15 @@
  */
 class Ainstainer_TechTalk_Block_View extends Mage_Core_Block_Template
 {
-    protected function _toHtml()
+    public function getRequestRecord()
     {
-//        echo "Ainstainer_TechTalk_Block_View_toHtml";
-        echo Mage::getModel('techtalk/techLogic')->sayHello();
+        return Mage::getModel('techtalk/contact')->load(1); 
     }
-//    public function myfunction()
-//    {
-//        return "Hello tuts+ world";
-//    }
+
+    public function getRequestCollection($id)
+    {
+        return Mage::getModel('techtalk/contact')->getCollection()->
+        addFieldToFilter('request_id',array("neq" => $id));
+    }
+
 }
