@@ -9,18 +9,34 @@
         <models>
             <techtalk>
                 <class>Ainstainer_TechTalk_Model</class>
+                <resourceModel>techtalk_resource</resourceModel>
             </techtalk>
+            <techtalk_resource>
+                <class>Ainstainer_TechTalk_Model_Resource</class>
+                <entities>
+                    <contact>
+                        <table>ain_contact</table>
+                    </contact>
+                </entities>
+            </techtalk_resource>
         </models>
-
-        <helpers>
+        <resources>
+            <techtalk_setup>
+                <setup>
+                    <module>Ainstainer_TechTalk</module>
+                </setup>
+            </techtalk_setup>
+        </resources>
+        <blocks>
             <techtalk>
-                <class>Ainstainer_TechTalk_Helper</class>
+                <class>Ainstainer_TechTalk_Block</class>
             </techtalk>
-        </helpers>
+        </blocks>
+
 
     </global>
 
-<frontend>
+    <frontend>
         <routers>
             <techtalk>
                 <use>standard</use>
