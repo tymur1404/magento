@@ -6,7 +6,6 @@
  * Time: 11:43
  */
 ini_set('display_errors', 1);
-$CollectionContact = Mage::getModel('techtalk/contact')->getCollection();
 
 ?>
 <ul>
@@ -16,9 +15,8 @@ $CollectionContact = Mage::getModel('techtalk/contact')->getCollection();
 
 <h1>OTHER COMMENTS</h1>
 <ul>
-    <?php foreach($CollectionContact as $contact){
-        if($this->getRequestRecord()->getRequest_id() != $contact->getRequest_id()){?>
+    <?php foreach($this->getRequestCollection($this->getRequestRecord()->getRequest_id()) as $contact){?>
         <li><?php echo $contact->getName()?> said:</li>
         <li><?php echo $contact->getComment()?></li>
-    <?php }}?>
+    <?php }?>
 </ul>
