@@ -15,7 +15,7 @@ ini_set('display_errors', 1);
 
 <h1>OTHER COMMENTS</h1>
 <ul>
-    <?php foreach($this->getRequestCollection($this->getRequestRecord()->getRequest_id()) as $contact){?>
+    <?php foreach($this->getOtherComments($this->getRequestRecord()->getRequest_id()) as $contact){?>
         <li><?php echo $contact->getName()?> said:</li>
         <li><?php echo $contact->getComment()?></li>
     <?php }?>
