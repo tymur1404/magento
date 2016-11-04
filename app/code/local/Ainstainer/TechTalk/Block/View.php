@@ -12,7 +12,7 @@ class Ainstainer_TechTalk_Block_View extends Mage_Core_Block_Template
         return Mage::getModel('techtalk/contact')->load(1); 
     }
 
-    public function getRequestCollection($id)
+    public function getOtherComments($id)// get all comments except one
     {
         return Mage::getModel('techtalk/contact')->getCollection()->
         addFieldToFilter('request_id',array("neq" => $id));
