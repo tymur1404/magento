@@ -7,17 +7,14 @@
  */
 $contacts = array(
     array(
-        'request_id' => 1,
         'name'     => 'Timur',
         'comment'     => 'Mogento it`s an easy'
     ),
     array(
-        'request_id' => 2,
         'name'     => 'Sveta',
         'comment'     => 'I know just how to spell the word "Mogento"'
     ),
     array(
-        'request_id' => 3,
         'name'     => 'Vasya',
         'comment'     => 'blah blah blah'
     ),
