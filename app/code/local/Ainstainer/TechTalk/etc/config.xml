@@ -32,8 +32,11 @@
                 <class>Ainstainer_TechTalk_Block</class>
             </techtalk>
         </blocks>
-
-
+        <helpers>
+            <techtalk>
+                <class>Ainstainer_TechTalk_Helper</class>
+            </techtalk>
+        </helpers>
     </global>
 
     <frontend>
@@ -55,4 +58,16 @@
             </updates>
         </layout>
     </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <inchoo_orders before="Mage_Adminhtml">Ainstainer_TechTalk_Adminhtml</inchoo_orders>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 </config>
