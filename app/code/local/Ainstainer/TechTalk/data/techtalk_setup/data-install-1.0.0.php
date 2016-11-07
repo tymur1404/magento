@@ -8,15 +8,21 @@
 $contacts = array(
     array(
         'name'     => 'Timur',
-        'comment'     => 'Mogento it`s an easy'
+        'comment'     => 'Mogento it`s an easy',
+        'date_add' => '0000-00-00 00:00:00',
+        'approved' => 1
     ),
     array(
         'name'     => 'Sveta',
-        'comment'     => 'I know just how to spell the word "Mogento"'
+        'comment'     => 'I know just how to spell the word "Mogento"',
+        'date_add' => '0000-00-00 00:00:00',
+        'approved' => 1
     ),
     array(
         'name'     => 'Vasya',
-        'comment'     => 'blah blah blah'
+        'comment'     => 'blah blah blah',
+        'date_add' => '0000-00-00 00:00:00',
+        'approved' => 0
     ),
 );
 
