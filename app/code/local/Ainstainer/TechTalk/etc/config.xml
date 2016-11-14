@@ -64,7 +64,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <inchoo_orders before="Mage_Adminhtml">Ainstainer_TechTalk_Adminhtml</inchoo_orders>
+                        <ain_contacts before="Mage_Adminhtml">Ainstainer_TechTalk_Adminhtml</ain_contacts>
                     </modules>
                 </args>
             </adminhtml>
