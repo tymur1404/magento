@@ -100,4 +100,17 @@ class Ainstainer_TechTalk_Adminhtml_ContactController extends  Mage_Adminhtml_Co
 
         $this->indexAction();
     }
+
+        public function massStatusAction(){
+            $Ids = $this->getRequest()->getParam('approved');
+            $status     = (int)$this->getRequest()->getParam('status');
+            $storeId    = (int)$this->getRequest()->getParam('store', 0);
+            foreach ($Ids as $id) {
+                $model = Mage::getModel('techtalk/contact')->load($id);
+                $model->setApproved($status)
+                    ->save();
+            }
+
+            $this->_redirect('*/*/', array('store'=> $storeId));
+        }
 }
