@@ -46,11 +46,9 @@ class Ainstainer_TechTalk_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Bl
 
         $this->addColumn('approved', [
             'header' => $helper->__('Approved'),
-            'type'   => 'checkbox',
+            'type'   => 'text',
             'index'  => 'approved',
-            'name' => 'approved',
             'align' => 'center',
-            'value'      =>  '1'
         ]);
 
         $this->addColumn('date_add', [
@@ -79,40 +77,26 @@ class Ainstainer_TechTalk_Block_Adminhtml_Contact_Grid extends Mage_Adminhtml_Bl
         return $this->getUrl('*/*/grid', ['_current' => true]);
     }
 
-//    public function massUpdateStatusAction(){
-//        $reviewsIds = $this->getRequest()->getParam('approved');
-//        $session    = Mage::getSingleton('techtalk/contact');
-//
-//        foreach ($reviewsIds as $reviewId) {
-//            $model = Mage::getModel('tschtalk/contact')->load(15);
-//            $model->setApproved(1)
-//                ->save()
-//                ->aggregate();
-//        }
-//        $session->addSuccess(
-//            Mage::helper('adminhtml')->__('Total of %d record(s) have been updated.', count($reviewsIds))
-//        );
-//    }
+    protected function _prepareMassaction()
+    {
+        $this->setMassactionIdField('approved');
+        $this->getMassactionBlock()->setFormFieldName('approved');
 
-//    protected function _prepareMassaction()
-//    {
-//        $this->setMassactionIdField('approved');
-//        $this->getMassactionBlock()->setFormFieldName('approved');
-//
-//        $this->getMassactionBlock()->addItem('approve', array(
-//            'label'=> Mage::helper('techtalk')->__('Change approve'),
-//            'url'  => $this->getUrl('*/*/massStatus', array('_current'=>true)),
-//            'index' => 'approved',
-//            'value' => '1',
-//            'additional' => array(
-//                'visibility' => array(
-//                    'name' => 'status',
-//                    'type' => 'select',
-//                    'class' => 'required-entry',
-//                    'label' => Mage::helper('techtalk')->__('Approved'),
-//                )
-//            )
-//        ));
-//        return $this;
-//    }
+        $this->getMassactionBlock()->addItem('approve', array(
+            'label'=> Mage::helper('techtalk')->__('Change approve'),
+            'url'  => $this->getUrl('*/*/massStatus', array('_current'=>true)),
+            'index' => 'approved',
+            'value' => '1',
+            'additional' => array(
+                'visibility' => array(
+                    'name' => 'status',
+                    'type' => 'select',
+                    'class' => 'required-entry',
+                    'label' => Mage::helper('techtalk')->__('Approved'),
+                    'values' => array('Disabled', 'Enabled')
+                )
+            )
+        ));
+        return $this;
+    }
 }
