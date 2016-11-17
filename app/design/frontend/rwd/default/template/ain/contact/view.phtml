@@ -5,18 +5,17 @@
  * Date: 02.11.16
  * Time: 11:43
  */
-ini_set('display_errors', 1);
 
 ?>
 
 <div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
 <div class="page-title">
-    <h1><?php echo Mage::helper('contacts')->__('Contact Us') ?></h1>
+    <h1><?php echo Mage::helper('techtalk')->__('Comments') ?></h1>
 </div>
 <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post" class="scaffold-form">
     <div class="fieldset">
-        <h2 class="legend"><?php echo Mage::helper('contacts')->__('Contact Information') ?></h2>
-        <p class="required"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
+        <h2 class="legend"><?php echo Mage::helper('techtalk')->__('Contact Information') ?></h2>
+        <p class="required"><?php echo Mage::helper('techtalk')->__('* Required Fields') ?></p>
         <ul class="form-list">
             <li class="fields">
                 <div class="field">
@@ -58,3 +57,5 @@ ini_set('display_errors', 1);
         <li>Date: <?php echo $contact->getDate_add()?></li><br>
     <?php }?>
 </ul>
+<?php echo $this->getChildHtml('ain.cookies.notice') ?>
+<?php echo $this->getChildHtml('mapsblock') ?>
