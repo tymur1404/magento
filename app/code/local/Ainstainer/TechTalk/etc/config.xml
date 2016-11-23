@@ -48,6 +48,13 @@
                     <frontName>magetalk</frontName>
                 </args>
             </techtalk>
+            <contacts>
+                <args>
+                    <modules>
+                        <ain_contacts before="Mage_Contacts">Ainstainer_TechTalk_Contacts</ain_contacts>
+                    </modules>
+                </args>
+            </contacts>
         </routers>
 
         <layout>
@@ -64,7 +71,7 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <ain_contacts before="Mage_Adminhtml">Ainstainer_TechTalk_Adminhtml</ain_contacts>
+                        <ain_adminhtml before="Mage_Adminhtml">Ainstainer_TechTalk_Adminhtml</ain_adminhtml>
                     </modules>
                 </args>
             </adminhtml>
