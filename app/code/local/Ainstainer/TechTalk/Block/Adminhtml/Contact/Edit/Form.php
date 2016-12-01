@@ -32,7 +32,6 @@ class Ainstainer_TechTalk_Block_Adminhtml_Contact_Edit_Form extends Mage_Adminht
     protected function _prepareForm()
     {
         $model = Mage::registry('contact_request');
-
         $form = new Varien_Data_Form(
             ['id' => 'edit_form', 'action' => $this->getUrl('*/*/save', ['id' => $this->getRequest()->getParam('request_id')]), 'method' => 'post']
         );

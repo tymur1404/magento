@@ -97,7 +97,6 @@ class Ainstainer_TechTalk_Adminhtml_ContactController extends  Mage_Adminhtml_Co
                             'name' => $post['name'],
                             'comment' => $post['comment'],
                             'approved' => isset($post['approved'])  ? $post['approved'] : 0))->save();
-        
         $storeId    = (int)$this->getRequest()->getParam('store', 0);
         $this->_redirect('*/*/', array('store'=> $storeId));
     }

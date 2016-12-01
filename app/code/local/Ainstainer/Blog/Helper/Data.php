@@ -6,7 +6,7 @@
  * Time: 14:04
  */
 
-class Ainstainer_TechTalk_Helper_Data extends Mage_Core_Helper_Abstract
+class Ainstainer_Blog_Helper_Data extends Mage_Core_Helper_Abstract
 {
 
 }

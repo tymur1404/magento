@@ -2,15 +2,17 @@
 /**
  * Created by PhpStorm.
  * User: timur
- * Date: 02.11.16
- * Time: 11:32
+ * Date: 25.11.16
+ * Time: 17:56
  */
 
-class Ainstainer_TechTalk_Model_Resource_Contact_Collection
+class Ainstainer_Blog_Model_Resource_Post_Collection
     extends Mage_Core_Model_Resource_Db_Collection_Abstract
 {
     protected function _construct()
     {
-        $this->_init('techtalk/contact');
+        $this->_init('blog/post');
     }
+
+    
 }

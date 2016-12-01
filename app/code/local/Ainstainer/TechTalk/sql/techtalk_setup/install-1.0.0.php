@@ -23,6 +23,9 @@ $table = $installer->getConnection()
     ->addColumn('comment', Varien_Db_Ddl_Table::TYPE_TEXT, null, array(
       'nullable' => false
     ))
+    ->addColumn('approved', Varien_Db_Ddl_Table::TYPE_TINYINT, null, array(
+        'nullable' => false
+    ))
     ->addColumn('date_add', Varien_Db_Ddl_Table::TYPE_DATETIME, null, array(
         'nullable' => false
     ));

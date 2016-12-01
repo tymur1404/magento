@@ -16,10 +16,6 @@ class Ainstainer_TechTalk_Block_Adminhtml_Contact extends Mage_Adminhtml_Block_W
 
         parent::__construct();
         $this->_removeButton('add');
-//        $this->_addButton('saveandcontinue', array(
-//            'label'     => Mage::helper('adminhtml')->__('Save and Continue Edit'),
-//            'onclick'   => 'saveAndContinueEdit()',
-//            'class'     => 'save',
-//        ), -100);
+
     }
 }
