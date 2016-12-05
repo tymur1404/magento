@@ -1,0 +1,15 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: timur
+ * Date: 02.12.16
+ * Time: 14:08
+ */
+$category = $this->viewCategory();
+?>
+<h1> Category </h1>
+<ul>
+    <li><?php echo $category->getName()?></li>
+    <li><?php echo $category->getDescr()?></li>
+    <li><img style="height: 200px" src="<?php echo Mage::getBaseUrl('media').'images'.DS.$category->getImage()?>"/></li>
+</ul>

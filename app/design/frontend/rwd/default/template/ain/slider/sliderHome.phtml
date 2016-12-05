@@ -1,0 +1,20 @@
+<?php
+/** @var Ainstainer_Slider_Block_View $this
+ * Created by PhpStorm.
+ * User: timur
+ * Date: 02.11.16
+ * Time: 11:43
+ */
+$slides = $this->getSlider(1);
+?>
+
+<div id="sliderFrame">
+    <div id="slider">
+        <?php foreach($slides as $slide){?>
+            <?php echo $slide['title']?>
+            <img src="/media/images/slides/<?php echo $slide['image']?>" />
+        <?php }?>
+    </div>
+</div>
+
+

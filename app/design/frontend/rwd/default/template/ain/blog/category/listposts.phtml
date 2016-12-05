@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: timur
+ * Date: 02.12.16
+ * Time: 13:56
+ */
+
+?>
+<?php 
+    $arr = $this->getAllPosts();
+    ?>
+<h1> Posts </h1>
+
+<?php foreach($arr as $post){    ?>
+
+    <li><a href="<?php echo Mage::getUrl('blog/post/view', array('id' => $post['post_id']));?>">
+            <b><?php echo $post['title']?></b></a></li>
+<?php }?>

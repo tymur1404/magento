@@ -1,0 +1,14 @@
+<?php
+/** @var Ainstainer_Blog_Block_View $this
+ * Created by PhpStorm.
+ * User: timur
+ * Date: 02.11.16
+ * Time: 11:43
+ */
+?>
+<h1> Categories </h1>
+
+<?php foreach($this->getAllCategories() as $category){?>
+    <li><a href="<?php echo Mage::getUrl('blog/category/view', array('id' => $category->getCategory_id()));?>">
+            <b><?php echo $category->getName()?></b></a></li>
+<?php }?>

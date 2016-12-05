@@ -1,0 +1,13 @@
+<?php
+/** @var Ainstainer_Blog_Block_View $this
+ * Created by PhpStorm.
+ * User: timur
+ * Date: 02.11.16
+ * Time: 11:43
+ */
+?>
+<h1> Post </h1>
+
+<?php $post = $this->viewPost()?>
+    <li><?php echo $post->getTitle()?></li>
+    <li><?php echo $post->getContent()?></li>
