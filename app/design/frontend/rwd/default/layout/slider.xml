@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<layout>
+    <cms_index_index><!-- layout handle for the homepage -->
+        <reference name="content">
+            <block type="core/template" name="homepage" as="homepage" template="page/html/homepage.phtml" />
+            <block type="slider/view" name="sliderHome"  template="ain/slider/sliderHome.phtml" />
+            <block  name="head" >
+                <action method="addJs"><script>ain_slider/js-image-slider.js</script></action>
+                <action method="addCss"><stylesheet>css/js-image-slider.css</stylesheet></action>
+            </block>
+        </reference>
+    </cms_index_index>
+    <contacts_index_index>
+        <reference name="content">
+            <block type="slider/view" name="sliderHome"  template="ain/slider/sliderProduct.phtml" />
+            <block  name="head" >
+                <action method="addJs"><script>ain_slider/js-image-slider.js</script></action>
+                <action method="addCss"><stylesheet>css/js-image-slider.css</stylesheet></action>
+            </block>
+        </reference>
+    </contacts_index_index>
+</layout>
+
